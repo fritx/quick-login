@@ -1,0 +1,12 @@
+{
+  "name": "quick-login",
+  "version": "0.0.1",
+  "description": "Quick login for express app",
+  "repository": "git@github.com:fritx/quick-login.git",
+  "devDependencies": {
+    "express": "^4.10.4"
+  },
+  "dependencies": {
+    "basic-auth": "^1.0.0"
+  }
+}
