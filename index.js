@@ -1,13 +1,13 @@
 var auth = require('basic-auth')
 
-module.exports = function quick(checkUser){
+module.exports = function quick(checkAuth){
 
   return function(req, res, next){
     if (!req.headers['authorization']) {
       return onVisit()
     }
 
-    checkUser(auth(req), function(err, found){
+    checkAuth(auth(req), function(err, found){
       if (err || !found) return onFail()
       next()
     })

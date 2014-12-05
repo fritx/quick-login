@@ -1,8 +1,9 @@
 var app = require('express')()
+var _ = require('lodash')
 
-app.use(require('./')(function(user, next){
-  next(null, user.name === 'fritx' &&
-    user.pass === 'momo1')
+app.use(require('./')(function checkAuth(data, next){
+  next(null, data.name === 'fritx' &&
+    data.pass === 'momo')
 }))
 
 app.get('/', function(req, res){
